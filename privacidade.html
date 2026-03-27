@@ -13,10 +13,35 @@
         p, li { font-size: 15px; color: #444; }
         ul { padding-left: 20px; }
         .links-uteis { background: #f0fdf0; padding: 15px; border-radius: 6px; border-left: 4px solid #2D6B2D; }
-        .footer { margin-top: 40px; text-align: center; font-size: 13px; color: #888; border-top: 1px solid #eee; padding-top: 20px; display: flex; flex-direction: column; align-items: center; }
-        .footer-content { margin-bottom: 10px; }
-        /* Ajuste para garantir que a imagem de alta resolução caiba no rodapé */
-        .footer-icon { width: 80px; height: auto; margin-top: 10px; border-radius: 8px; }
+        
+        /* NOVO ESTILO DO RODAPÉ ALINHADO */
+        .footer { 
+            margin-top: 40px; 
+            padding-top: 20px; 
+            border-top: 1px solid #eee; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            gap: 20px;
+        }
+        .footer-text { 
+            font-size: 13px; 
+            color: #888; 
+            text-align: left; 
+            line-height: 1.4;
+        }
+        .footer-icon { 
+            width: 70px; 
+            height: auto; 
+            border-radius: 8px; 
+        }
+        
+        /* Ajuste para telas pequenas (celular) */
+        @media (max-width: 600px) {
+            .footer { flex-direction: column; text-align: center; }
+            .footer-text { text-align: center; }
+        }
+
         strong { color: #2D6B2D; }
     </style>
 </head>
@@ -25,17 +50,16 @@
         <h1>Política de Privacidade - Giro da Sorte</h1>
 
         <h2>1. Informações Gerais</h2>
-        <p>A presente Política de Privacidade contém informações sobre como tratamos, total ou parcialmente, de forma automatizada ou não, os dados pessoais dos usuários que acessam nosso aplicativo <strong>Giro da Sorte</strong>, desenvolvido pela <strong>Fel-Apps</strong>.</p>
+        <p>A presente Política de Privacidade contém informações sobre como tratamos os dados pessoais dos usuários que acessam nosso aplicativo <strong>Giro da Sorte</strong>, desenvolvido pela <strong>Fel-Apps</strong>.</p>
 
         <h2>2. Coleta de Dados e Finalidade</h2>
-        <p>Nosso aplicativo não exige a criação de conta ou fornecimento de nome e e-mail. No entanto, coletamos dados técnicos através de serviços de terceiros para o funcionamento do app:</p>
+        <p>Coletamos dados técnicos estritamente para o funcionamento do app:</p>
         <ul>
-            <li><strong>Dados de Dispositivo:</strong> Para garantir a integridade do sorteio via processamento gráfico local e proteção contra fraudes.</li>
-            <li><strong>IDs de Publicidade:</strong> Para exibir anúncios personalizados e recompensas (vídeos premiados).</li>
+            <li><strong>Dados de Dispositivo:</strong> Para integridade do sorteio via processamento gráfico local e proteção contra fraudes.</li>
+            <li><strong>IDs de Publicidade:</strong> Para exibir anúncios e recompensas via Google AdMob.</li>
         </ul>
 
         <h2>3. Serviços de Terceiros (Google AdMob)</h2>
-        <p>Este aplicativo utiliza serviços de terceiros que podem coletar informações usadas para identificá-lo. Você pode consultar a política de privacidade nos links abaixo:</p>
         <div class="links-uteis">
             <ul>
                 <li><a href="https://policies.google.com/privacy" target="_blank">Google Play Services</a></li>
@@ -44,19 +68,16 @@
         </div>
 
         <h2>4. Segurança e Performance</h2>
-        <p>Valorizamos sua confiança. O aplicativo utiliza um <strong>motor gráfico de alto desempenho</strong> para garantir que os sorteios sejam fluidos e seguros. Todo o processamento visual ocorre localmente no dispositivo, reforçando nosso compromisso de não transmitir dados de interação para servidores externos.</p>
+        <p>O aplicativo utiliza um <strong>motor gráfico de alto desempenho</strong> para garantir sorteios fluidos e seguros. Todo o processamento visual ocorre localmente.</p>
 
-        <h2>5. Cookies e Cache</h2>
-        <p>O aplicativo pode utilizar "cookies" externos (através do AdMob) para melhorar a relevância dos anúncios exibidos ao usuário.</p>
+        <h2>5. Conformidade com a LGPD</h2>
+        <p>Operamos em conformidade com a <strong>Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018)</strong>.</p>
 
-        <h2>6. Conformidade com a LGPD</h2>
-        <p>Este aplicativo e seus processos de tratamento de dados operam em estrita conformidade com a <strong>Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 - LGPD)</strong>, garantindo a transparência e os direitos de privacidade de nossos usuários no território brasileiro.</p>
-
-        <h2>7. Alterações</h2>
-        <p>Podemos atualizar nossa Política de Privacidade de tempos em tempos. Recomendamos que você revise esta página periodicamente.</p>
+        <h2>6. Alterações</h2>
+        <p>Recomendamos que você revise esta página periodicamente para atualizações.</p>
 
         <div class="footer">
-            <div class="footer-content">
+            <div class="footer-text">
                 &copy; 2026 Fel-Apps | felpps.software@gmail.com<br>
                 Publicado via GitHub Pages para transparência do desenvolvedor.
             </div>
