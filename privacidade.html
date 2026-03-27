@@ -14,7 +14,7 @@
         ul { padding-left: 20px; }
         .links-uteis { background: #f0fdf0; padding: 15px; border-radius: 6px; border-left: 4px solid #2D6B2D; }
         
-        /* NOVO ESTILO DO RODAPÉ ALINHADO */
+        
         .footer { 
             margin-top: 40px; 
             padding-top: 20px; 
@@ -22,24 +22,20 @@
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
-            gap: 20px;
+            flex-wrap: wrap; 
         }
+        
         .footer-text { 
             font-size: 13px; 
             color: #888; 
-            text-align: left; 
-            line-height: 1.4;
+            flex: 1; 
+            text-align: left;
         }
+        
         .footer-icon { 
             width: 70px; 
             height: auto; 
-            border-radius: 8px; 
-        }
-        
-        /* Ajuste para telas pequenas (celular) */
-        @media (max-width: 600px) {
-            .footer { flex-direction: column; text-align: center; }
-            .footer-text { text-align: center; }
+            margin-left: 15px;
         }
 
         strong { color: #2D6B2D; }
@@ -50,16 +46,16 @@
         <h1>Política de Privacidade - Giro da Sorte</h1>
 
         <h2>1. Informações Gerais</h2>
-        <p>A presente Política de Privacidade contém informações sobre como tratamos os dados pessoais dos usuários que acessam nosso aplicativo <strong>Giro da Sorte</strong>, desenvolvido pela <strong>Fel-Apps</strong>.</p>
+        <p>A presente Política de Privacidade contém informações sobre como tratamos os dados pessoais no aplicativo <strong>Giro da Sorte</strong>, da <strong>Fel-Apps</strong>.</p>
 
-        <h2>2. Coleta de Dados e Finalidade</h2>
-        <p>Coletamos dados técnicos estritamente para o funcionamento do app:</p>
+        <h2>2. Coleta de Dados</h2>
+        <p>Coletamos dados técnicos estritamente para funcionamento:</p>
         <ul>
-            <li><strong>Dados de Dispositivo:</strong> Para integridade do sorteio via processamento gráfico local e proteção contra fraudes.</li>
-            <li><strong>IDs de Publicidade:</strong> Para exibir anúncios e recompensas via Google AdMob.</li>
+            <li><strong>Dados de Dispositivo:</strong> Para integridade do sorteio via processamento gráfico local.</li>
+            <li><strong>IDs de Publicidade:</strong> Através do AdMob.</li>
         </ul>
 
-        <h2>3. Serviços de Terceiros (Google AdMob)</h2>
+        <h2>3. Links de Terceiros</h2>
         <div class="links-uteis">
             <ul>
                 <li><a href="https://policies.google.com/privacy" target="_blank">Google Play Services</a></li>
@@ -67,21 +63,15 @@
             </ul>
         </div>
 
-        <h2>4. Segurança e Performance</h2>
-        <p>O aplicativo utiliza um <strong>motor gráfico de alto desempenho</strong> para garantir sorteios fluidos e seguros. Todo o processamento visual ocorre localmente.</p>
-
-        <h2>5. Conformidade com a LGPD</h2>
-        <p>Operamos em conformidade com a <strong>Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018)</strong>.</p>
-
-        <h2>6. Alterações</h2>
-        <p>Recomendamos que você revise esta página periodicamente para atualizações.</p>
+        <h2>4. Segurança</h2>
+        <p>Todo o processamento visual ocorre localmente no dispositivo para sua segurança.</p>
 
         <div class="footer">
             <div class="footer-text">
                 &copy; 2026 Fel-Apps | felpps.software@gmail.com<br>
                 Publicado via GitHub Pages para transparência do desenvolvedor.
             </div>
-            <img src="girobeijo.png" alt="Ícone Trevo Fel-Apps" class="footer-icon">
+            <img src="girobeijo.png" alt="Ícone Trevo" class="footer-icon">
         </div>
     </div>
 </body>
