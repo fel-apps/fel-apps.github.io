@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giro da Sorte - Oficial</title>
+    
+    <link rel="icon" type="image/png" href="girobeijo.png">
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -31,7 +34,6 @@
             overflow-x: hidden;
         }
 
-        /* Animação de Fundo */
         body::before {
             content: "";
             position: absolute;
@@ -63,6 +65,13 @@
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+
+        .mascote {
+            width: 80px;
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
         }
 
         .logo {
@@ -132,10 +141,12 @@
 <body>
 
     <div class="container">
+        <img src="girobeijo.png" alt="Mascote Giro de Sorte" class="mascote">
+        
         <div class="logo">Giro da Sorte</div>
         <p class="tagline">Sua sorte em um giro. Prático, rápido e moderno.</p>
 
-        <a href="#" class="btn-main">Baixar na Google Play</a>
+        <a href="https://play.google.com/store/apps/details?id=fel.apps.girodasorte" target="_blank" class="btn-main">Baixar na Google Play</a>
 
         <div class="links-grid">
             <a href="privacidade.html" class="link-item">Privacidade</a>
