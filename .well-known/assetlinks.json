@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "fel.apps.girodasorte",
+      "sha256_cert_fingerprints": [
+        "B0:5C:BD:44:BA:D4:46:F1:63:15:A6:83:9D:8D:23:9B:1E:65:6A:48:DE:EC:93:56:08:5B:34:15:63:4E:CF:0D"
+      ]
+    }
+  }
+]
