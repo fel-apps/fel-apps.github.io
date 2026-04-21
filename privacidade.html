@@ -18,8 +18,10 @@
             --primary: #6366f1;
             --secondary: #a855f7;
             --bg: #0f172a;
-            --glass: rgba(255, 255, 255, 0.05);
+            --glass: rgba(30, 41, 59, 0.7); /* Fundo mais escuro para o card */
             --glass-border: rgba(255, 255, 255, 0.1);
+            /* Isso avisa o iPhone que a página é tema escuro */
+            color-scheme: dark;
         }
 
         * {
@@ -29,10 +31,15 @@
             font-family: 'Poppins', sans-serif;
         }
 
+        /* Força o fundo escuro no HTML e no BODY */
+        html, body {
+            background-color: #0f172a !important;
+            min-height: 100vh;
+        }
+
         body {
-            background: radial-gradient(circle at top right, #1e1b4b, #0f172a);
-            background-attachment: fixed;
-            color: #cbd5e1;
+            background: radial-gradient(circle at top right, #1e1b4b, #0f172a) fixed !important;
+            color: #cbd5e1 !important;
             line-height: 1.7;
             padding: 40px 20px;
             position: relative;
@@ -56,7 +63,7 @@
             max-width: 850px;
             margin: 0 auto;
             padding: 40px;
-            background: var(--glass);
+            background: var(--glass) !important;
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid var(--glass-border);
@@ -76,6 +83,7 @@
             background: linear-gradient(to right, #818cf8, #c084fc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            color: #818cf8; /* Fallback */
             margin-bottom: 5px;
             font-weight: 700;
         }
@@ -83,12 +91,12 @@
         .update-date {
             text-align: center;
             font-size: 0.9rem;
-            color: #64748b;
+            color: #64748b !important;
             margin-bottom: 40px;
         }
 
         h2 {
-            color: #fff;
+            color: #fff !important;
             font-size: 1.4rem;
             margin-top: 35px;
             margin-bottom: 15px;
@@ -101,6 +109,7 @@
             font-size: 1rem;
             margin-bottom: 15px;
             text-align: justify;
+            color: #cbd5e1 !important;
         }
 
         ul {
@@ -109,12 +118,12 @@
         }
 
         strong {
-            color: #818cf8;
+            color: #818cf8 !important;
             font-weight: 600;
         }
         
         .links-uteis {
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.3) !important;
             padding: 25px;
             border-radius: 16px;
             border-left: 4px solid var(--primary);
@@ -127,9 +136,9 @@
 
         .links-uteis a {
             display: inline-block;
-            background: var(--glass);
+            background: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--glass-border);
-            color: #fff;
+            color: #fff !important;
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 8px;
@@ -142,13 +151,12 @@
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             transform: translateX(8px);
             border-color: transparent;
-            box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3);
         }
 
         .footer {
             margin-top: 50px;
             font-size: 0.85rem;
-            color: #64748b;
+            color: #64748b !important;
             border-top: 1px solid var(--glass-border);
             padding-top: 30px;
             display: flex;
@@ -168,11 +176,6 @@
             height: auto;
             border-radius: 12px;
             filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
-            transition: transform 0.3s ease;
-        }
-
-        .footer-icon:hover {
-            transform: scale(1.1) rotate(5deg);
         }
     </style>
 </head>
