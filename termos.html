@@ -11,66 +11,181 @@
     <meta property="og:url" content="https://fel-apps.github.io/termos.html">
 
     <link rel="icon" type="image/png" href="girobeijo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
     <style>
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; max-width: 850px; margin: 0 auto; padding: 20px; background-color: #f4f7f4; }
-        .card { background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 8px solid #2D6B2D; }
-        h1 { color: #2D6B2D; font-size: 28px; text-align: center; margin-bottom: 10px; }
-        .update-date { text-align: center; font-size: 14px; color: #888; margin-bottom: 30px; }
-        h2 { color: #1b4d1b; font-size: 20px; margin-top: 25px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-        p, li { font-size: 15px; color: #444; }
-        ul { padding-left: 20px; }
+        :root {
+            --primary: #6366f1;
+            --secondary: #a855f7;
+            --bg: #0f172a;
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
 
-        .footer { margin-top: 40px; font-size: 13px; color: #888; border-top: 1px solid #eee; padding-top: 20px; display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
-        .footer-text { text-align: center; line-height: 1.5; }
-        .footer-icon { width: 65px; height: auto; border-radius: 8px; }
-        strong { color: #2D6B2D; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: radial-gradient(circle at top right, #1e1b4b, #0f172a);
+            background-attachment: fixed;
+            color: #cbd5e1;
+            line-height: 1.7;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: var(--primary);
+            filter: blur(200px);
+            border-radius: 50%;
+            z-index: -1;
+            top: -10%;
+            left: -10%;
+            opacity: 0.2;
+        }
+
+        .card {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px;
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            text-align: center;
+            background: linear-gradient(to right, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .update-date {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 1.4rem;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--glass-border);
+            font-weight: 600;
+        }
+
+        p, li {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        strong {
+            color: #818cf8;
+            font-weight: 600;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 0.85rem;
+            color: #64748b;
+            border-top: 1px solid var(--glass-border);
+            padding-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-text {
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .footer-icon {
+            width: 70px;
+            height: auto;
+            border-radius: 12px;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
+            transition: transform 0.3s ease;
+        }
+
+        .footer-icon:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
     </style>
 </head>
 <body>
     <div class="card">
         <h1>Termos de Uso - Giro da Sorte</h1>
-        <p class="update-date">Última atualização: 17 de Abril de 2026</p>
+        <p class="update-date">Última atualização: 21 de Abril de 2026</p>
 
-        <h2>1. Aceitação dos Termos</h2>
-        <p>Ao utilizar o aplicativo <strong>Giro da Sorte</strong>, desenvolvido pela <strong>Fel-Apps</strong>, você concorda em cumprir estes termos de serviço. Este é um software de entretenimento e o uso implica na aceitação total destas regras.</p>
+        <h2>1. Aceitação dos Termos e Classificação</h2>
+        <p>Ao utilizar o aplicativo <strong>Giro da Sorte</strong>, desenvolvido pela <strong>Fel-Apps</strong>, você concorda em cumprir estes termos. O usuário declara possuir <strong>maioridade legal (18 anos ou mais)</strong> ou estar sob supervisão responsável. Embora o app possua classificação indicativa <strong>"Livre"</strong> em virtude de sua natureza técnica, o conteúdo é estrategicamente destinado ao público adulto interessado em ferramentas de auxílio estatístico.</p>
 
         <h2>2. Uso Consciente e Responsabilidade</h2>
-        <p>O <strong>Giro da Sorte</strong> é uma ferramenta baseada em algoritmos e filtros. <strong>Incentivamos o uso do aplicativo como auxiliar para suas apostas reais caso você não possua palpites próprios ou deseje utilizar nossa tecnologia de geração de jogos, sempre prezando pelo uso consciente e responsável.</strong></p>
+        <p>O <strong>Giro da Sorte</strong> é uma ferramenta baseada em algoritmos e filtros. <strong>Incentivamos o uso do aplicativo apenas como auxiliar para suas escolhas e palpites, sempre prezando pelo uso consciente e responsável.</strong></p>
         <ul>
-            <li>O aplicativo deve ser usado estritamente como uma ferramenta de lazer.</li>
-            <li>A <strong>Fel-Apps</strong> não se responsabiliza por decisões financeiras ou apostas feitas por usuários fora do ambiente do aplicativo.</li>
+            <li>O aplicativo deve ser usado estritamente como uma ferramenta de lazer e entretenimento.</li>
+            <li>A <strong>Fel-Apps</strong> não se responsabiliza por decisões financeiras ou apostas feitas por usuários em ambientes externos.</li>
             <li>Recomendamos o uso com moderação e responsabilidade.</li>
         </ul>
 
         <h2>3. Tecnologia e Isenção de Resultados</h2>
-        <p>Embora a <strong>Fel-Apps</strong> utilize tecnologias de geração de jogos aprimorados com filtros e algoritmos próprios, o usuário declara estar ciente de que:</p>
+        <p>Utilizamos tecnologias de geração de jogos aprimorados, porém o usuário declara estar ciente de que:</p>
         <ul>
-            <li>Trata-se de um software puramente de entretenimento baseado em sorte;</li>
-            <li>Não é tecnicamente possível determinar, através de qualquer tecnologia, quais sorteios serão efetivamente premiados;</li>
-            <li>Utilizamos lógica e meios estatísticos para auxiliar e aumentar as chances de acerto, porém sem qualquer garantia de vitória;</li>
-            <li>O aplicativo é ideal para usuários que não possuem um palpite pessoal ou que sentem dificuldade em escolher quais jogos realizar.</li>
+            <li>Trata-se de um software baseado em eventos aleatórios e sorte;</li>
+            <li>Não há qualquer garantia de premiação ou vitória através do uso de nossos algoritmos;</li>
+            <li>O aplicativo é um facilitador para usuários que buscam otimizar suas escolhas estatisticamente.</li>
         </ul>
 
-        <h2>4. Licença de Uso</h2>
-        <p>É concedida permissão para utilizar o aplicativo para uso pessoal e não comercial. Você não pode:</p>
-        <ul>
-            <li>Tentar modificar, copiar ou realizar engenharia reversa no código do aplicativo;</li>
-            <li>Remover quaisquer marcas ou direitos autorais da <strong>Fel-Apps</strong>;</li>
-            <li>Utilizar o aplicativo para fins ilícitos ou fraudulentos.</li>
-        </ul>
+        <h2>4. Licença de Uso e Compartilhamento</h2>
+        <p>É concedida permissão para utilizar o software para uso pessoal. O usuário detém o direito de compartilhar as imagens e cartões gerados pelo app, sendo o <strong>único responsável</strong> pelo destino desse conteúdo em redes sociais ou aplicativos de terceiros.</p>
 
         <h2>5. Isenção de Responsabilidade Técnica</h2>
-        <p>Embora trabalhemos constantemente para manter a estabilidade do software, a <strong>Fel-Apps</strong> não garante que o aplicativo estará livre de erros em todos os modelos de dispositivos. Não nos responsabilizamos por interrupções causadas por falhas de hardware do usuário ou encerramentos inesperados do sistema Android.</p>
+        <p>Trabalhamos para manter a estabilidade via <strong>OpenGL</strong>, mas a <strong>Fel-Apps</strong> não garante que o software estará livre de erros em todos os dispositivos. Falhas de hardware ou encerramentos inesperados do sistema são de responsabilidade do fabricante do aparelho.</p>
 
         <h2>6. Links de Terceiros e Anúncios</h2>
-        <p>O aplicativo utiliza serviços de anúncios (AdMob). Não temos controle sobre o conteúdo desses anúncios de terceiros e não somos responsáveis pelas ofertas ou sites vinculados a eles.</p>
+        <p>O aplicativo é gratuito e mantido pela rede <strong>AdMob</strong>. Não controlamos e não somos responsáveis pelas ofertas ou sites vinculados a esses serviços de publicidade de terceiros.</p>
 
-        <h2>7. Alterações nos Termos</h2>
-        <p>Estes termos podem ser atualizados periodicamente. O uso contínuo do aplicativo após qualquer alteração constitui sua aceitação dos novos Termos de Uso.</p>
+        <h2>7. Publicidade e Sustentabilidade</h2>
+        <p>O usuário reconhece que o aplicativo é gratuito e financiado por publicidade. A exibição de anúncios é a condição que permite à <strong>Fel-Apps</strong> manter e atualizar os algoritmos e a infraestrutura do software sem custos diretos ao usuário.</p>
+
+        <h2>8. Alterações e Manutenção</h2>
+        <p>Estes termos podem ser atualizados periodicamente para refletir melhorias contínuas, novas funcionalidades ou ajustes de conformidade. O uso contínuo do software após qualquer alteração constitui sua aceitação automática das novas regras e condições estabelecidas.</p>
 
         <div class="footer">
             <div class="footer-text">
-                &copy; 2026 Fel-Apps | felpps.apps@gmail.com
+                &copy; 2026 <strong>Fel-Apps</strong> | felpps.apps@gmail.com
             </div>
             <img src="girobeijo.png" alt="Ícone Trevo Fel-Apps" class="footer-icon">
         </div>
